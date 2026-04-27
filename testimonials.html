@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maoni ya Wateja - Aden Catering | Kisasa, Dodoma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="preloader-spinner"></div><div class="preloader-text">Aden Catering</div></div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="https://wa.me/255652890821" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span class="float-tooltip">WhatsApp</span></a>
+    <a href="tel:0652890821" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span class="float-tooltip">Piga Sasa</span></a>
+    <a href="mailto:nopaynoga@gmail.com" class="float-btn email-btn"><i class="fas fa-envelope"></i><span class="float-tooltip">Barua Pepe</span></a>
+    <a href="booking.html" class="float-btn quote-btn"><i class="fas fa-file-invoice"></i><span class="float-tooltip">Omba Bei</span></a>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo"><a href="index.html"><div class="logo-icon"><i class="fas fa-utensils"></i></div><div class="logo-text"><h2>Aden <span>Catering</span></h2><p>Kisasa • Dodoma</p></div></a></div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Nyumbani</a></li><li><a href="about.html">Kuhusu</a></li><li><a href="services.html">Huduma</a></li>
+            <li><a href="menu.html">Menyu</a></li><li><a href="pricing.html">Bei</a></li>
+            <li><a href="gallery.html">Nyumba ya Picha</a></li>
+            <li><a href="testimonials.html" class="active">Maoni</a></li>
+            <li><a href="faq.html">Maswali</a></li>
+            <li><a href="contact.html">Wasiliana</a></li><li><a href="booking.html" class="btn-book-nav">Omba Sasa</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header"><div class="container"><h1>Maoni ya Wateja</h1><p><a href="index.html">Nyumbani</a> / Maoni</p></div></section>
+
+<!-- Testimonials Main -->
+<section class="testimonials-main">
+    <div class="container">
+        <div class="testimonials-intro" data-aos="fade-up"><h2>Wateja Wetu Wanasemaje</h2><p>Usikubali tu maneno yetu. Tazama maoni ya wateja wetu walioridhika Dodoma.</p></div>
+
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+
+        <div class="rating-summary" data-aos="fade-up">
+            <div class="rating-stats"><div class="rating-score">4.9 <span>/ 5.0</span></div><div class="rating-stars">★★★★★</div><p>Kutokana na maoni 150+ ya wateja wetu</p></div>
+            <div class="rating-bars"><div class="rating-bar"><span>Nyota 5</span><div class="bar"><div style="width: 85%"></div></div><span>85%</span></div><div class="rating-bar"><span>Nyota 4</span><div class="bar"><div style="width: 12%"></div></div><span>12%</span></div><div class="rating-bar"><span>Nyota 3</span><div class="bar"><div style="width: 3%"></div></div><span>3%</span></div></div>
+        </div>
+
+        <div class="testimonials-cta" data-aos="fade-up"><h3>Uko Tayari Kuwa Mteja Wetu Ajaye?</h3><a href="booking.html" class="btn-primary">Omba Huduma Leo</a></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 Aden Catering - Huduma Bora ya Chakula Kisasa, Dodoma</p></div></div></footer>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<script>
+const testimonials = [
+    { name: "John Mwita", role: "Mratibu wa Mafunzo", text: "Aden Catering walitoa chakula bora kwa mafunzo yetu ya siku 5. Walifika kwa wakati, usafi mzuri, na chakula kitamu sana!", rating: 5 },
+    { name: "Sarah Hassan", role: "Mratibu wa Mkutano", text: "Tulikuwa na wageni 300 kwenye mkutano wetu. Chakula kilikuwa kizuri na timu ilikuwa ya kitaalamu sana!", rating: 5 },
+    { name: "Peter Lema", role: "Mwenyeji wa Semina", text: "Bei nafuu na huduma nzuri. Pilau na kuku vilikuwa vyema! Nitarudi tena.", rating: 4 },
+    { name: "Grace Thomas", role: "Sherehe ya Kuzaliwa", text: "Wageni wangu walipenda sana chakula! Sambusa zilikuwa bora kabisa. Asante Aden Catering!", rating: 5 }
+];
+
+function loadTestimonials() {
+    const container = document.getElementById('testimonialsGrid');
+    if(container) container.innerHTML = testimonials.map(t => `<div class="testimonial-card-detailed"><div class="testimonial-header"><div class="testimonial-icon"><i class="fas fa-quote-left"></i></div><div class="testimonial-rating">${'★'.repeat(t.rating)}</div></div><p class="testimonial-text">"${t.text}"</p><div class="testimonial-footer"><h4>${t.name}</h4><p>${t.role}</p></div></div>`).join('');
+}
+document.addEventListener('DOMContentLoaded', loadTestimonials);
+</script>
+
+<style>
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0; }
+.testimonial-card-detailed { background: white; border-radius: 20px; padding: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: all 0.3s; }
+.testimonial-card-detailed:hover { transform: translateY(-5px); box-shadow: 0 20px 35px rgba(0,0,0,0.1); }
+.testimonial-header { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+.testimonial-icon i { font-size: 2rem; color: #e67e22; opacity: 0.5; }
+.testimonial-rating { color: #f39c12; }
+.testimonial-text { font-style: italic; margin-bottom: 1.5rem; line-height: 1.6; }
+.testimonial-footer h4 { color: #e67e22; margin-bottom: 0.25rem; }
+.rating-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: #fef9e8; padding: 2rem; border-radius: 20px; margin: 2rem 0; }
+.rating-score { font-size: 3rem; font-weight: bold; color: #e67e22; }
+.rating-stars { font-size: 1.5rem; color: #f39c12; }
+.rating-bar { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+.rating-bar .bar { flex: 1; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; }
+.rating-bar .bar div { height: 100%; background: #e67e22; }
+@media (max-width: 768px) { .rating-summary { grid-template-columns: 1fr; } }
+</style>
+</body>
+</html>

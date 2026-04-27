@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyumba ya Picha - Aden Catering | Tazama Vyakula Vyetu Kisasa, Dodoma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="preloader-spinner"></div><div class="preloader-text">Aden Catering</div></div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="https://wa.me/255652890821" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span class="float-tooltip">WhatsApp</span></a>
+    <a href="tel:0652890821" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span class="float-tooltip">Piga Sasa</span></a>
+    <a href="mailto:nopaynoga@gmail.com" class="float-btn email-btn"><i class="fas fa-envelope"></i><span class="float-tooltip">Barua Pepe</span></a>
+    <a href="booking.html" class="float-btn quote-btn"><i class="fas fa-file-invoice"></i><span class="float-tooltip">Omba Bei</span></a>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo"><a href="index.html"><div class="logo-icon"><i class="fas fa-utensils"></i></div><div class="logo-text"><h2>Aden <span>Catering</span></h2><p>Kisasa • Dodoma</p></div></a></div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Nyumbani</a></li><li><a href="about.html">Kuhusu</a></li><li><a href="services.html">Huduma</a></li>
+            <li><a href="menu.html">Menyu</a></li><li><a href="pricing.html">Bei</a></li>
+            <li><a href="gallery.html" class="active">Nyumba ya Picha</a></li>
+            <li><a href="testimonials.html">Maoni</a></li><li><a href="faq.html">Maswali</a></li>
+            <li><a href="contact.html">Wasiliana</a></li><li><a href="booking.html" class="btn-book-nav">Omba Sasa</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header"><div class="container"><h1>Nyumba ya Picha</h1><p><a href="index.html">Nyumbani</a> / Nyumba ya Picha</p></div></section>
+
+<!-- Gallery Section -->
+<section class="gallery-main">
+    <div class="container">
+        <div class="gallery-intro" data-aos="fade-up"><h2>Picha za Vyakula na Matukio Yetu</h2><p>Tazama baadhi ya picha za vyakula tulivyowahi kutoa kwa wateja wetu Dodoma.</p></div>
+
+        <div class="gallery-filter" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">Zote</button>
+            <button class="filter-btn" data-filter="breakfast">Kiamsha Kinywa</button>
+            <button class="filter-btn" data-filter="lunch">Chakula cha Mchana</button>
+            <button class="filter-btn" data-filter="snacks">Vitafunio</button>
+            <button class="filter-btn" data-filter="events">Matukio</button>
+        </div>
+
+        <div class="gallery-masonry" id="galleryMasonry"></div>
+
+        <div class="gallery-cta" data-aos="fade-up"><h3>Una Tayari Kuagiza Chakula Kizuri?</h3><a href="booking.html" class="btn-primary btn-large">Omba Huduma Leo</a></div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox"><span class="close-lightbox">&times;</span><img class="lightbox-img" id="lightboxImg"><div class="lightbox-caption" id="lightboxCaption"></div></div>
+
+<!-- Footer -->
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 Aden Catering - Huduma Bora ya Chakula Kisasa, Dodoma</p></div></div></footer>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<style>
+.gallery-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.gallery-item { position: relative; overflow: hidden; border-radius: 15px; cursor: pointer; }
+.gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.4s; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 1rem; transform: translateY(100%); transition: transform 0.3s; display: flex; justify-content: space-between; }
+.gallery-item:hover .gallery-overlay { transform: translateY(0); }
+.gallery-filter { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.filter-btn { padding: 8px 20px; border: none; background: #f0f0f0; border-radius: 30px; cursor: pointer; transition: 0.3s; }
+.filter-btn.active, .filter-btn:hover { background: #e67e22; color: white; }
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; align-items: center; justify-content: center; flex-direction: column; }
+.lightbox-img { max-width: 90%; max-height: 80%; object-fit: contain; }
+.lightbox-caption { color: white; margin-top: 1rem; }
+.close-lightbox { position: absolute; top: 20px; right: 40px; color: white; font-size: 3rem; cursor: pointer; }
+</style>
+
+<script>
+const galleryImages = [
+    { src: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400", category: "lunch", title: "Chakula cha Mchana" },
+    { src: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400", category: "breakfast", title: "Kiamsha Kinywa" },
+    { src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400", category: "lunch", title: "Buffet" },
+    { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400", category: "events", title: "Huduma ya Kitaalamu" },
+    { src: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400", category: "lunch", title: "Nyama Choma" },
+    { src: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400", category: "lunch", title: "Samaki" },
+    { src: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400", category: "breakfast", title: "Mandazi na Chai" },
+    { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400", category: "snacks", title: "Vitafunio" },
+    { src: "https://images.unsplash.com/photo-1546548970-71785318a17b?w=400", category: "events", title: "Usanidi wa Mkutano" }
+];
+
+function loadGallery() {
+    const container = document.getElementById('galleryMasonry');
+    function render(filter = 'all') {
+        const filtered = filter === 'all' ? galleryImages : galleryImages.filter(img => img.category === filter);
+        container.innerHTML = filtered.map((img, i) => `<div class="gallery-item" onclick="openLightbox(${i})"><img src="${img.src}" alt="${img.title}" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>${img.title}</span></div></div>`).join('');
+    }
+    render();
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        render(btn.dataset.filter);
+    }));
+}
+
+window.openLightbox = function(i) {
+    document.getElementById('lightboxImg').src = galleryImages[i].src;
+    document.getElementById('lightboxCaption').textContent = galleryImages[i].title;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+document.querySelector('.close-lightbox')?.addEventListener('click', () => document.getElementById('lightbox').style.display = 'none');
+document.addEventListener('DOMContentLoaded', loadGallery);
+</script>
+</body>
+</html>

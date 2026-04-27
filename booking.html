@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omba Nukuu ya Bei - Aden Catering | Kisasa, Dodoma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="preloader-spinner"></div><div class="preloader-text">Aden Catering</div></div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="https://wa.me/255652890821" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span class="float-tooltip">WhatsApp</span></a>
+    <a href="tel:0652890821" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span class="float-tooltip">Piga Sasa</span></a>
+    <a href="mailto:nopaynoga@gmail.com" class="float-btn email-btn"><i class="fas fa-envelope"></i><span class="float-tooltip">Barua Pepe</span></a>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo"><a href="index.html"><div class="logo-icon"><i class="fas fa-utensils"></i></div><div class="logo-text"><h2>Aden <span>Catering</span></h2><p>Kisasa • Dodoma</p></div></a></div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Nyumbani</a></li><li><a href="about.html">Kuhusu</a></li><li><a href="services.html">Huduma</a></li>
+            <li><a href="menu.html">Menyu</a></li><li><a href="pricing.html">Bei</a></li>
+            <li><a href="gallery.html">Nyumba ya Picha</a></li>
+            <li><a href="testimonials.html">Maoni</a></li><li><a href="faq.html">Maswali</a></li>
+            <li><a href="contact.html">Wasiliana</a></li><li><a href="booking.html" class="btn-book-nav active">Omba Sasa</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header"><div class="container"><h1>Omba Nukuu ya Bei</h1><p><a href="index.html">Nyumbani</a> / Omba Bei</p></div></section>
+
+<!-- Booking Section -->
+<section class="booking-section">
+    <div class="container">
+        <div class="booking-wrapper">
+            <div class="booking-info" data-aos="fade-right">
+                <h2><i class="fas fa-file-invoice-dollar"></i> Pata Nukuu Yako</h2>
+                <p>Jaza fomu hii na tutawasiliana nawe ndani ya masaa 2 na nukuu ya bei kwa tukio lako.</p>
+                <div class="quick-contacts"><h3><i class="fas fa-phone-alt"></i> Mawasiliano ya Haraka</h3><p><i class="fas fa-phone"></i> <a href="tel:0652890821">0652 890 821</a></p><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/255652890821">WhatsApp: 0652 890 821</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:nopaynoga@gmail.com">nopaynoga@gmail.com</a></p></div>
+                <div class="info-note"><i class="fas fa-info-circle"></i><p><strong>Kumbuka:</strong> Tunahudumia maeneo yote ya Mkoa wa Dodoma. Hutozwi ada ya usafiri kwa maeneo ya ndani ya Dodoma.</p></div>
+            </div>
+            <div class="booking-form-container" data-aos="fade-left">
+                <form id="bookingForm">
+                    <div class="form-row"><input type="text" id="bookingName" placeholder="Jina Lako Kamili" required><input type="tel" id="bookingPhone" placeholder="Namba ya Simu" required></div>
+                    <div class="form-row"><input type="email" id="bookingEmail" placeholder="Barua Pepe"><input type="text" id="bookingEventName" placeholder="Jina la Tukio"></div>
+                    <div class="form-row"><select id="bookingEventType" required><option>Chagua Aina ya Tukio</option><option>Mafunzo</option><option>Semina</option><option>Warsha</option><option>Mkutano</option><option>Sherehe</option></select><input type="date" id="bookingDate" required></div>
+                    <div class="form-row"><input type="number" id="bookingGuests" placeholder="Idadi ya Wageni" required><input type="time" id="bookingTime" placeholder="Saa ya Tukio"></div>
+                    <div class="form-row"><select id="bookingPackage"><option>Chagua Kifurushi</option><option>Kawaida (TSh 12,000/mshindi)</option><option>Standard (TSh 18,000/mshindi)</option><option>Premium (TSh 25,000/mshindi)</option><option>Maalum / Mkutano</option></select><input type="number" id="bookingBudget" placeholder="Bajeti Yako (TSh)"></div>
+                    <div class="form-group"><textarea id="bookingNotes" rows="4" placeholder="Maelezo ya ziada (mahitaji maalum, menyu unayopenda...)"></textarea></div>
+                    <button type="submit" class="btn-submit btn-large"><i class="fas fa-paper-plane"></i> Tuma Ombi la Bei</button>
+                </form>
+                <div id="bookingMessage"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 Aden Catering - Huduma Bora ya Chakula Kisasa, Mkoa wa Dodoma</p></div></div></footer>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<style>
+.booking-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+.booking-info, .booking-form-container { background: white; border-radius: 30px; padding: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.quick-contacts { background: #fef9e8; padding: 20px; border-radius: 20px; margin: 25px 0; }
+.quick-contacts a { text-decoration: none; color: #333; }
+.quick-contacts a:hover { color: #e67e22; }
+.info-note { background: rgba(230,126,34,0.1); padding: 15px; border-radius: 15px; display: flex; gap: 15px; align-items: flex-start; }
+.info-note i { color: #e67e22; font-size: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+.form-group { margin-bottom: 15px; }
+.booking-form-container input, .booking-form-container select, .booking-form-container textarea { width: 100%; padding: 14px 20px; border: 1px solid #e0e0e0; border-radius: 15px; font-family: inherit; }
+.btn-submit { width: 100%; padding: 15px; background: linear-gradient(135deg, #e67e22, #f39c12); color: white; border: none; border-radius: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(230,126,34,0.4); }
+@media (max-width: 992px) { .booking-wrapper { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</body>
+</html>
